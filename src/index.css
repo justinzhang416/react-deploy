@@ -1,0 +1,163 @@
+@import url("sidebar.css");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.wrapper{
+	display: flex;
+    flex-direction: column;
+	min-height: 100vh;
+    max-height: 100vh;
+}
+
+.bball{
+	height: 100px;
+ 	width: 100px;
+ 	padding: 3vh, 3vw;
+}
+.navbar-default{
+	margin-bottom: 0px;
+	display: flex;
+    font-size: 3em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+/*    background-color: #CAEBF2;
+    background-image: none;
+  	background-repeat: no-repeat;*/
+    color: #A9A9A9;
+    flex:20vh;
+    font-size: 2.5em;
+}
+
+.game-container{
+
+	display: flex;
+	flex-direction: row;
+	min-width: 100vw;
+	padding: 0vh,0vw;
+}
+
+.sidebar-container{
+	/*background: #EFEFEF;*/
+	flex: 20vw;
+    display: flex;
+    flex-direction: column;
+	/*display: flex;
+    flex-direction: column;
+    text-align: center;*/
+    /*margin: 0vh 0vw;
+    padding: 2vh 2vw;*/
+}
+
+.content{
+	color: #A9A9A9;
+	flex: 85vw;
+	display: flex;
+    flex-direction:column;
+    text-align: center;
+    overflow: auto;
+
+    padding: 0vh 0vw;
+}
+
+.page-title{
+    color: #A9A9A9;
+    text-align: center;
+    font-size: 3em;
+    margin: 5vh 2vw;
+}
+
+.page-content{
+    color: #A9A9A9;
+    text-align: center;
+    font-size: 1.3em;
+    /*margin: 2vh 2vw;*/
+    padding: 2vh 5vw;
+}
+
+.page-continue{
+    color: #A9A9A9;
+    text-align: center;
+    font-size: 1.5em;
+    /*width: 25%;
+    margin-left: auto;
+    margin-right: auto;*/
+    padding: 2vh 0vw;
+}
+
+.btn-default{
+    font-size: 1em;
+}
+
+.mini-title{
+    padding: 2vh 0vw;
+    margin: 0vh 0vw;
+}
